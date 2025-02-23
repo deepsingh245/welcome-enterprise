@@ -277,7 +277,8 @@ About 2
 .service__thumb a img {
   height: 320px;
   width: 230px;
-  aspect-ratio: 23 / 32;
+  aspect-ratio: 1 / 1;
+  object-fit: scale-down;
 }
 .service__thumb {
   position: relative;
@@ -293,6 +294,15 @@ About 2
   display: flex;
   width: 100%;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .service__section__wrap{
+    flex-direction: column;
+  }
+  .service__section__wrap .col-md-5 .service__thumb{
+    display: none;
+  }
 }
 .service__hover {
   height: 100%;
@@ -2013,5 +2023,34 @@ blockquote {
   .about-cert{
     flex-direction: column;
   }
-  
+  .htc__footer__wrap{
+    flex-direction: column;
+  } 
+}
+
+.product-details-table{
+  overflow: auto;
+  width: 100%;
+}
+table {
+  border: 1px solid #dededf;
+  height: 100%;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 1px;
+  text-align: left;
+}
+th {
+  border: 1px solid #dededf;
+  background-color: #f46246;
+  color: #fff;
+  padding: 5px;
+  width: 150px;
+}
+td {
+  border: 1px solid #dededf;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 5px;
 }
